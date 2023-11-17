@@ -6,7 +6,7 @@
  * @param {float} price Price of one unit of the product
  * @param {string} brand Product brand name
  * @param {integer} quantity Available quantity of the product
- * @param {Array of string} images Array of product images
+ * @param {[string]} images Array of product images
  */
 function AbstractProduct(name, description, price, brand, quantity, images){
   if (this.constructor === AbstractProduct) {
@@ -115,10 +115,10 @@ AbstractProduct.prototype.getImage = function(parametr){
  * @param {string} author Author's name
  * @param {string} date Date of the review
  * @param {string} comment Comment
- * @param {rating} ratingService Rating for service (from 0 to 5)
- * @param {rating} ratingPrice Rating for price (from 0 to 5)
- * @param {rating} ratingValue Rating for value (from 0 to 5)
- * @param {rating} ratingQuality Rating for quality (from 0 to 5) 
+ * @param {number} ratingService Rating for service (from 0 to 5)
+ * @param {number} ratingPrice Rating for price (from 0 to 5)
+ * @param {number} ratingValue Rating for value (from 0 to 5)
+ * @param {number} ratingQuality Rating for quality (from 0 to 5) 
  */
 AbstractProduct.prototype.addReview = function(ID, author, date, comment,
    ratingService, ratingPrice, ratingValue, ratingQuality){
@@ -167,7 +167,7 @@ AbstractProduct.prototype.getAverageRating = function(){
  * @param {float} price Price of one unit of the product
  * @param {string} brand Product brand name
  * @param {integer} quantity Available quantity of the product
- * @param {array of string} images Array of product images
+ * @param {[string]} images Array of product images
  * @param {string} material The material of the product
  * @param {string} color The color of the product
  */
@@ -188,7 +188,7 @@ Clothes.prototype.constructor = Clothes;
  * @param {float} price Price of one unit of the product
  * @param {string} brand Product brand name
  * @param {integer} quantity Available quantity of the product
- * @param {array of string} images Array of product images
+ * @param { [string]} images Array of product images
  * @param {string} warranty The warranty of the product
  * @param {string} power The power of the product
  */
@@ -208,10 +208,10 @@ Electronics.prototype.constructor = Electronics;
  * @param {string} author Author's name
  * @param {string} date Date of the review
  * @param {string} comment Comment
- * @param {rating} ratingService Rating for service (from 0 to 5)
- * @param {rating} ratingPrice Rating for price (from 0 to 5)
- * @param {rating} ratingValue Rating for value (from 0 to 5)
- * @param {rating} ratingQuality Rating for quality (from 0 to 5) 
+ * @param {number} ratingService Rating for service (from 0 to 5)
+ * @param {number} ratingPrice Rating for price (from 0 to 5)
+ * @param {number} ratingValue Rating for value (from 0 to 5)
+ * @param {number} ratingQuality Rating for quality (from 0 to 5) 
  */
 function Review(ID, author, date, comment, ratingService, ratingPrice, ratingValue, 
   ratingQuality ) {
@@ -278,7 +278,7 @@ Review.prototype.setProperty = function(nameProperty, newValue){
 
 /**
  * Function for searching Products whose name or description contains a specific string
- * @param {array of Products} products array of Products
+ * @param {[Products]} products array of Products
  * @param {string} search string to search in the name or description
  * @returns array of Products that have a match with the specified string in the name 
  * or description
@@ -298,7 +298,7 @@ function searchProducts(products, search){
 /**
  * Function for sorting Products by price, name, or ID. If a different sort rule is 
  * specified, the array remains unchanged.
- * @param {array of Products} products array of Products
+ * @param {[Products]} products array of Products
  * @param {string} sortRule  rule by which the array is sorted
  * @returns sorted array of Products
  */
