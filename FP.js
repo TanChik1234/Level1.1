@@ -9,7 +9,7 @@ console.log(cityReplacementFunc(inputText));
  * function that replaces city names in the input string with a string 
  * of the following format: "city name(Xth place int the TOP-10 largest
  * cities in Ukraine, population YYYYY people)". 
- * @param {string CSV} cities text in CSV format with coordinates, name
+ * @param {string} cities text in CSV format with coordinates, name
  * and population count
  * @returns a function that replaces city names in the input string with
  *  a string of the following format: "city name(Xth place int the TOP-10
